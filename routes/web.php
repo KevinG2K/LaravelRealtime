@@ -24,3 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//las rutas views generan vistas sin pasar por un controlador
+//retornamos la vista que se llama "showAll", y que está en el dir "users".
+Route::view('/users', 'users.showAll')->name('user.all');
